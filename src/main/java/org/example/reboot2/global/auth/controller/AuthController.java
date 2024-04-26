@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class AuthController {
     private final UserService userService;
 
-    @PostMapping("/signup")
     @Operation(
             summary = "사용자 회원가입",
             description = "사용자의 서비스 회원 가입",
@@ -29,6 +28,7 @@ public class AuthController {
                     )
             }
     )
+    @PostMapping("/signup")
     public HttpStatus signUp(@RequestBody UserDTO.UserSignUpDTO reqDto){
         return userService.signup(reqDto);
     }
