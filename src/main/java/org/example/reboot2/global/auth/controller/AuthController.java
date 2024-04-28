@@ -32,4 +32,19 @@ public class AuthController {
     public HttpStatus signUp(@RequestBody UserDTO.UserSignUpDTO reqDto){
         return userService.signup(reqDto);
     }
+
+    @Operation(
+            summary = "사용자 회원가입",
+            description = "사용자의 서비스 회원 가입",
+            responses = {
+                    @ApiResponse(
+                            responseCode = "200",
+                            description = "회원가입 성공"
+                    )
+            }
+    )
+    @PostMapping("/test")
+    public HttpStatus test(@RequestBody UserDTO.UserSignUpDTO reqDto){
+        return HttpStatus.OK;
+    }
 }
