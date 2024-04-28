@@ -68,5 +68,5 @@ jobs:
         --application-name aptner
         --deployment-group-name aptnergr
         --file-exists-behavior OVERWRITE
-        --s3-location bucket=S3aptdeploy,bundleType=zip,key=aptnerapp.zip
+        --s3-location bucket=aptdeploy,bundleType=zip,key=aptnerapp.zip
         --region ap-northeast-2
